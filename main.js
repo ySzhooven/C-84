@@ -35,7 +35,28 @@ function my_keydown(e)
 			document.getElementById("d1").innerHTML="Você pressionou uma tecla alfabeto";
 			console.log("alphabet key");
 		}
-		//Escreva um código para verificar o tipo de tecla pressionada
+
+else if(keyPressed >=48 && keyPressed<=57)
+{
+	numberkey();
+	document.getElementById("d1").innerHTML="Você pressionou uma tecla número";
+	console.log("Number key")
+}
+	
+	else if(keyPressed >=48 && keyPressed<=57)
+{
+	arrowkey();
+	document.getElementById("d1").innerHTML="Você pressionou uma tecla direcional";
+	console.log("Arrow key")
+}	
+
+		else if((keyPressed ==17)|| (keyPressed ==18 || keyPressed =27))
+{
+	specialkey();
+	document.getElementById("d1").innerHTML="Você pressionou cntrl/esc/alt";
+	console.log("Special key")
+}
+		
 	else{
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
